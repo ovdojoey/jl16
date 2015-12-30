@@ -22,6 +22,7 @@ Metalsmith(__dirname)
     watch({
       paths: {
         "${source}/**/*": true,
+        "${source}/**/**/*": "*",
       },
       livereload: true,
     })
