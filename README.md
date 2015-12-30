@@ -6,7 +6,7 @@ Feel free to use the `build.js` file to create your own similar static build usi
 
 
 ## USAGE
-Install dependencies using `npm install`.  Run the Metalsmith API using `node build.js`.
+Install dependencies using `npm install`.  Build using `node build.js`.
 
 ## MODIFICATION
 This website is specific to me but feel free to create your own layouts using my same build chain.
