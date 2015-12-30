@@ -4,9 +4,14 @@ var sass = require('metalsmith-sass');
 var cleanCSS = require('metalsmith-clean-css');
 var uglify     = require('metalsmith-uglify');
 var watch = require('metalsmith-watch');
+var layouts = require('metalsmith-layouts');
 
 Metalsmith(__dirname)
   .destination("public/")
+  .use(layouts({
+    "engine" : "handlebars",
+    "directory" : "src/layouts"
+  }))
   .use(sass({
     outputDir: 'css/'
   }))
