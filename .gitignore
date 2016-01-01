@@ -1,3 +1,5 @@
 /node_modules
 /public/instakey
+/public/weatherkey
 /src/instakey
+/src/weatherkey

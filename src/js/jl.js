@@ -7,13 +7,17 @@
 (function(){
   'use strict';
   var projectRibbon = document.getElementById("project-ribbon");
+  var bodyImg = document.getElementById("body-img");
 
   var panels = {
     toggleSlash: function () {
       projectRibbon.classList.toggle("slash");
+      bodyImg.classList.add("dim");
     },
     reset: function () {
       projectRibbon.classList.remove("slash");
+      bodyImg.classList.remove("dim");
+
     }
   };
 
@@ -201,14 +205,57 @@
     console.log("Error loading posts");
   }
 
+  function loadWeather(json) {
+    var weather = JSON.parse(json);
+    console.log(weather);
+
+  }
+  function failedWeather() {
+    console.log("Error loading weather");
+  }
+
+  function imgPreloader() {
+
+    this.images = [];
+
+    this.addImages = function(images) {
+
+        var self = this;
+
+        if (!images) return;
+
+        if (Array.isArray(images)) {
+          images.forEach(function(ele) {
+            var _image = new Image();
+            _image.src = ele;
+            self.images.push(_image);
+          });
+        }
+    };
+
+    return this;
+  }
+
 
   function init() {
+
     ajaxRequest("instafeed.php", loadInstaG, failedInstag);
+    ajaxRequest("weatherfeed.php", loadWeather, failedWeather);
+
+
     // resize window width if changes
     window.onresize = function () {
        window_width = window.innerWidth;
     };
+
+    var newImage = new imgPreloader();
+    newImage.addImages(["/img/color.jpg","/img/hammer.jpg","/img/spark.jpg","/img/juiced.jpg",]);
+
   }
+
+
+
+
 
   init();
 })();
