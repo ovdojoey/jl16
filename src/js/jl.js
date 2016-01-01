@@ -2,32 +2,35 @@
 
 // http://api.openweathermap.org/data/2.5/weather?zip=32820,us&appid=5d87307ec2ac976e394333baaa93c861&units=imperial
 
-// var moreBtn = document.getElementById("more-on-me");
-var projectRibbon = document.getElementById("project-ribbon");
 
-var panels = {
-  toggleSlash: function () {
-    projectRibbon.classList.toggle("slash");
-  },
-  reset: function () {
-    projectRibbon.classList.remove("slash");
-  }
-};
 
-// moreBtn.addEventListener("click", panels.toggleMore);
-function checkHashState () {
-  var _hash = location.hash;
-  if( _hash === "#more" ) {
-    panels.toggleSlash();
-  }
-  if ( _hash === '' ) {
-    panels.reset();
-  }
-  console.log( _hash );
-}
-window.addEventListener("hashchange", checkHashState, false);
-checkHashState();
+(function(){
+  'use strict';
+  var projectRibbon = document.getElementById("project-ribbon");
 
+  var panels = {
+    toggleSlash: function () {
+      projectRibbon.classList.toggle("slash");
+    },
+    reset: function () {
+      projectRibbon.classList.remove("slash");
+    }
+  };
+
+  function checkHashState () {
+    var _hash = location.hash;
+    if( _hash === "#more" ) {
+      panels.toggleSlash();
+    }
+    if ( _hash === '' ) {
+      panels.reset();
+    }
+    // console.log( _hash );
+  }
+  window.addEventListener("hashchange", checkHashState, false);
+  checkHashState();
+
+})();
 
 (function(){
   'use strict';
@@ -45,7 +48,7 @@ checkHashState();
     window.requestAnimationFrame(step);
   }
 
-  function daysSinceBirth() {
+  function thedaysSinceBirth() {
     var oneDay = 24*60*60*1000; // hours*minutes*seconds*milliseconds
     var firstDate = new Date(1989,4,1);
     var secondDate = new Date();
@@ -54,12 +57,13 @@ checkHashState();
     window.requestAnimationFrame(step);
   }
 
-  daysSinceBirth();
+  thedaysSinceBirth();
 
 
 })();
 
 (function() {
+  var
   insta_posts_holder = document.getElementById('insta_posts'),
   insta_posts_mover = document.getElementById('insta_posts_container'),
   insta_shuffle = document.getElementById('shuffle_insta'),
@@ -164,7 +168,6 @@ checkHashState();
 
   function loadInstaG(json) {
     var insta_data = JSON.parse(json);
-    console.log(insta_data);
     insta_data.data.forEach(function (image) {
       if (image.type === "image" || image.type === "video") {
         if (image.caption === null) {

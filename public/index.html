@@ -1,12 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
   <meta charset="UTF-8">
   <title>Joey Lea | Developer and Designer</title>
+  <script>
+       (function() {
+           'use strict';
+           var htmlEle = document.documentElement;
+           htmlEle.classList.remove("no-js");
+           htmlEle.classList.add("js");
+           htmlEle.classList.add("hide-js");
+           htmlEle.className = "js hide-js";
+       })();
+   </script>
   <script src="https://use.typekit.net/pnc6egy.js"></script>
   <script>try{Typekit.load({ async: true });}catch(e){}</script>
   <link rel="stylesheet" href="/css/jl.css">
-
 </head>
 <body>
   <header class="header">
@@ -45,8 +54,8 @@
     <p class="ribbon-p">Thanks for swinging by.
       I'm currently in Orlando, FL where it's 80&deg;F with <span id="weather-main">clouds</span>.
     </p>
-    <hr />
-    <p class="ribbon-p">
+    <hr class="no-js-hide" />
+    <p class="ribbon-p no-js-hide">
       <strong>
         <a href="#more" id="more-on-me">More on me &rarr;</a>
       </strong>
@@ -56,7 +65,7 @@
         <a href="#lets-chat">Lets chat &rarr;</a>
       </strong>
     </p> -->
-    <hr />
+    <hr class="no-js-hide" />
     <h4 class="ribbon-subheadline headline">Thoughts and Blog Posts</h4>
     <ul class="ribbon-blog-posts">
       <a href="blog" class="blog-post">
@@ -86,7 +95,7 @@
       <li>I enjoy staying active</li>
       <li>When coding, I primarily use Atom, Sublime Text, and PhpStorm; occasionally Coda</li>
       <li>I am an avid Apple user</li>
-      <li>I use many CLI tools, frameworks and libraries.  Some of them include: git, bower, npm, gulp, Metalsmith (for this website), VueJS, Laravel, jQuery </li>
+      <li>I use many CLI tools, frameworks and libraries.  Some include: git, bower, npm, gulp, Metalsmith (for this website), VueJS, Laravel, jQuery </li>
     </ul>
 
     <a href="#" class="exit-link more-on-me">&larr; GO BACK</a>
@@ -105,6 +114,7 @@
         </span>
       </a>
       <div>
+
         <a id="shuffle_insta" data-scramble="false">
           <img src="/img/rotate.png" alt="Rotate" class="rotate">
           <div class="shuffle_caption">
@@ -114,6 +124,11 @@
         </a>
       </div>
     </div>
+    <noscript>
+      <p style="text-align:center; position: absolute; margin-top: -100px; padding: 100px 20px; background:rgba(244,195,196, 0.8); color: #222; font-size: 2rem;">
+        Bummer, JavaScript is not enabled and this section will not work.   Consider enabling JavaScript to continue.
+      </p>
+    </noscript>
     <section class="instagram">
       <div class="insta_posts_container" id="insta_posts_container">
         <ul class="posts" id="insta_posts" data-scramble="false">
@@ -129,7 +144,31 @@
     </div>
 
   </section>
+  <script>
+       (function() {
+           'use strict';
+           var htmlEle = document.documentElement;
+           var exitTimeout = false;
+           var timeout;
 
+           function fireJSAnimation () {
+             htmlEle.classList.remove("hide-js");
+             htmlEle.classList.add("show-js");
+           }
+
+           timeout = setTimeout(function() {
+             fireJSAnimation();
+             exitTimeout = true;
+           }, 300);
+
+           window.onload = function () {
+             if (!exitTimeout) {
+               clearTimeout(timeout);
+               fireJSAnimation();
+             }
+           }
+       })();
+   </script>
   <script src="/js/jl.min.js"></script>
 </body>
 </html>

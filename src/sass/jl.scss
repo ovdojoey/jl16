@@ -3,7 +3,7 @@ $color-blue : #3b6ae1;
 
 $break-md: 720px;
 $break-mdlg: 800px;
-$break-lg: 1200px;
+$break-lg: 1150px;
 
 html, body {
   margin: 0;
@@ -27,6 +27,15 @@ body {
   Header
   <header>
 */
+.hide-js .header .container{
+  opacity: 0;
+}
+.show-js .header .container{
+  opacity: 1;
+}
+.header .container{
+  transition: opacity 200ms 200ms;
+}
 .header {
   padding: 20px 0;
   border-bottom: 1px solid #dadade;
@@ -62,10 +71,21 @@ body {
       color: #222;
     }
 }
+.hide-js .above-fold{
+  transform: translateY(20px);
+  opacity: 0;
+}
+.show-js .above-fold{
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
 .above-fold{
   padding-bottom: 20px;
-  border-bottom: 2px solid #222;
+  border-bottom: 7px solid #f0f0f0;
+  transition: transform 400ms ease-in, opacity 600ms 100ms;
+  transform-origin: 20% 50%;
 }
+
 .project-ribbon.ribbon-behind{
   position: absolute;
   background: transparent;
@@ -87,7 +107,7 @@ body {
     display: block;
     padding: 22px 0 0 0;
     text-transform: lowercase;
-    color: $color-red;
+    color: #777;
 
   }
   .color-red{
@@ -126,18 +146,30 @@ body {
     }
   }
 }
+
+
+.hide-js .project-ribbon{
+  opacity: 0;
+  background: #eee;
+
+}
+.show-js .project-ribbon{
+
+}
 .project-ribbon{
-  background: rgba($color-red, 0.9);
+  background: rgba($color-red, 0.87);
   border-top: 3px solid transparent;
   min-height: 600px;
   width: 100%;
   position: relative;
   padding: 40px 20px;
-  opacity: 0.85;
+  // opacity: 0.85;
   color: #fff;
   font-family: "ff-tisa-sans-web-pro", "futura-pt", HelveticaNeue-Light, Helvetica Neue Light, Helvetica, sans-serif;
   transition: transform 400ms, opacity 400ms, background 600ms 0ms;
   z-index: 2;
+  opacity: 0.85;
+
   &.slash{
     // background: #f2f2f2;
     background: #ccc;
@@ -266,7 +298,6 @@ body {
 
 .body{
   min-height: 600px;
-
 }
 
 .home-headline{
@@ -289,12 +320,19 @@ body {
 .tagline-link{
   padding: 6px 20px;
   background: rgba($color-red, 0.8);
-  color: #fff;
+  color: #f0f0f0;
   text-decoration: none;
   font-family: "ff-tisa-sans-web-pro", HelveticaNeue-Light, Helvetica Neue Light, Helvetica, sans-serif;
   font-size: 1.15rem;
   border-radius: 5px;
   display: inline-block;
+  transition: background 200ms, color 200ms;
+
+
+  &:hover{
+    background: rgba($color-red, 0.92);
+    color: #fff;
+  }
 
 }
 @media (min-width: $break-md) {
@@ -390,7 +428,7 @@ body {
       &:hover{
         // background: lighten($color-red,20%);
         .rotate{
-          transform: rotate(1turn);
+          transform: rotate(.25turn);
         }
       }
       &:active{
@@ -432,7 +470,7 @@ body {
 
 
       .rotate{
-        transition: transform .4s;
+        transition: transform .3s;
         transform-origin: 50% 50%;
         position: relative;
         // top: 4px;
@@ -803,7 +841,16 @@ body {
     width: 90%;
   }
 }
-
+.no-js-hide{
+  visibility: hidden;
+  max-height: 0;
+  overflow: hidden;
+}
+.js .no-js-hide{
+  visibility: visible;
+  max-height: none;
+  overflow: visible;
+}
 
 
 
