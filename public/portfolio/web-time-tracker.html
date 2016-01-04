@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Web Time Tracker | Joey Lea</title>
+  <script>
+       (function() {
+           'use strict';
+           var htmlEle = document.documentElement;
+           htmlEle.className = "js hide-js";
+       })();
+   </script>
+  <script src="https://use.typekit.net/pnc6egy.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
+  <link rel="stylesheet" href="/css/jl.css">
+</head>
+<body class=" portfolio">
+
+  <header class="header">
+
+    <div class="container">
+
+      <div class="logo">
+        <a href="/" class="logo--link">JL</a>
+      </div>
+
+      <nav class="navigation">
+        <a href="/blog" class="navigation--link">Blog</a>
+        <a href="/portfolio" class="navigation--link">Portfolio</a>
+        <a href="/music" class="navigation--link">Music</a>
+        <a href="/contact" class="navigation--link">Contact</a>
+      </nav>
+
+
+    </div>
+
+  </header>
+
+  <section class="body">
+    <div class="container">
+
+      <div class="above-fold">
+        
+  <nav aria-label="breadcrumb" role="navigation" class="breadcrumb-nav">
+    <ul class="breadcrumb">
+      <li><a href="/" aria-level="1">Home</a></li>
+      <li><a href="/portfolio" aria-level="2">Portfolio</a></li>
+      <li><a href="#" class="active" aria-level="3">Web Time Tracker</a></li>
+    </ul>
+  </nav>
+
+  <h1 class="home-headline headline">Web Time Tracker</h1>
+
+  <p class="home-tagline">
+    A Chrome Extension that allows you to track your time spent using the browser.
+    This was mainly designed as a proof of concept and also to familarize myself with building a Chrome Extension.  It was built purely with JavaScript, HTML and Sass.
+  </p>
+  <p class="home-tagline">
+    <a href="https://chrome.google.com/webstore/detail/web-time-tracker/hfhhlhelfbijnejjdihdfchakekadhbg" target="_blank" class="tagline-link">See Extension</a>
+    &nbsp;
+    <a href="https://bitbucket.org/w3by/webdev-time-tracker" target="_blank" class="tagline-link">View the Repo</a>
+
+
+  </p>
+
+
+          <a href="promo-only-uk.html" class="up-next">
+            <span class="next-title previous"><span class="arrow">&larr;</span></span>
+            <span class="title previous">Promo Only UK</span>
+          </a>
+
+          <a href="timeline.html" class="up-next">
+            <span class="next-title"><span class="up-next-text">UP NEXT</span> <span class="arrow">&rarr;</span></span>
+            <span class="title">Timeline</span>
+          </a>
+
+      </div>
+
+    </div>
+
+  </section>
+  <section class="body-img portfolio web-time-tracker" id="body-img"></section>
+
+
+<div class="footer">
+  <div class="container">
+    <div class="copyright">
+      <span class="tk-futura-pt">&copy; 2016 <span>JL</span>.  &nbsp; All Rights Reserved.</span>
+      <div class="hand-craft">This site was <a href="/humans.txt" target="_blank">hand-crafted</a>.</div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+     (function() {
+         'use strict';
+         var htmlEle = document.documentElement;
+         var exitTimeout = false;
+         var timeout;
+
+         function fireJSAnimation () {
+           htmlEle.classList.remove("hide-js");
+           htmlEle.classList.add("show-js");
+         }
+
+         timeout = setTimeout(function () {
+           fireJSAnimation();
+           exitTimeout = true;
+         }, 800);
+
+         window.onload = function () {
+           if (!exitTimeout) {
+             clearTimeout(timeout);
+             fireJSAnimation();
+           }
+         }
+     })();
+ </script>
+<script src="/js/jl.min.js"></script>
+</body>
+</html>

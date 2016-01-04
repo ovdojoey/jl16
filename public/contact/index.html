@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Joey Lea | Developer and Designer</title>
+  <script>
+       (function() {
+           'use strict';
+           var htmlEle = document.documentElement;
+           htmlEle.className = "js hide-js";
+       })();
+   </script>
+  <script src="https://use.typekit.net/pnc6egy.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
+  <link rel="stylesheet" href="/css/jl.css">
+</head>
+<body class=" contact">
+
+  <header class="header">
+
+    <div class="container">
+
+      <div class="logo">
+        <a href="/" class="logo--link">JL</a>
+      </div>
+
+      <nav class="navigation">
+        <a href="/blog" class="navigation--link">Blog</a>
+        <a href="/portfolio" class="navigation--link">Portfolio</a>
+        <a href="/music" class="navigation--link">Music</a>
+        <a href="/contact" class="navigation--link">Contact</a>
+      </nav>
+
+
+    </div>
+
+  </header>
+
+  <section class="body">
+    <div class="container">
+
+      
+<div class="above-fold">
+  <h1 class="home-headline headline">Give me a shout</h1>
+  <p class="home-tagline">I probably won't be answering my rotary phone anytime soon, but feel free to give me a buzz via email at
+    <span class="email-is">Joey.L@w3by.com</span>
+  </p>
+  <p class="home-tagline">
+    <a href="mailto:joey.l@w3by.com?Subject=Hi Joey" class="tagline-link">Say Hello</a>
+  </p>
+</div>
+<div class="project-ribbon" id="project-ribbon">
+  <div class="ribbon--content">
+
+
+
+
+  </div>
+</div>
+<div class="ribbon-behind project-ribbon">
+</div>
+
+
+    </div>
+  </section>
+  <section class="body-img telephone" id="body-img"></section>
+
+<div class="footer">
+  <div class="container">
+    <div class="copyright">
+      <span class="tk-futura-pt">&copy; 2016 <span>JL</span>.  &nbsp; All Rights Reserved.</span>
+      <div class="hand-craft">This site was <a href="/humans.txt" target="_blank">hand-crafted</a>.</div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+     (function() {
+         'use strict';
+         var htmlEle = document.documentElement;
+         var exitTimeout = false;
+         var timeout;
+
+         function fireJSAnimation () {
+           htmlEle.classList.remove("hide-js");
+           htmlEle.classList.add("show-js");
+         }
+
+         timeout = setTimeout(function () {
+           fireJSAnimation();
+           exitTimeout = true;
+         }, 800);
+
+         window.onload = function () {
+           if (!exitTimeout) {
+             clearTimeout(timeout);
+             fireJSAnimation();
+           }
+         }
+     })();
+ </script>
+<script src="/js/jl.min.js"></script>
+</body>
+</html>

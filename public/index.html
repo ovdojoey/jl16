@@ -2,14 +2,12 @@
 <html lang="en" class="no-js">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Joey Lea | Developer and Designer</title>
   <script>
        (function() {
            'use strict';
            var htmlEle = document.documentElement;
-           htmlEle.classList.remove("no-js");
-           htmlEle.classList.add("js");
-           htmlEle.classList.add("hide-js");
            htmlEle.className = "js hide-js";
        })();
    </script>
@@ -17,7 +15,8 @@
   <script>try{Typekit.load({ async: true });}catch(e){}</script>
   <link rel="stylesheet" href="/css/jl.css">
 </head>
-<body>
+<body class=" ">
+
   <header class="header">
 
     <div class="container">
@@ -27,10 +26,10 @@
       </div>
 
       <nav class="navigation">
-        <a href="/about" class="navigation--link">About</a>
-        <a href="/about" class="navigation--link">Portfolio</a>
-        <a href="/about" class="navigation--link">Music</a>
-        <a href="/about" class="navigation--link">Contact</a>
+        <a href="/blog" class="navigation--link">Blog</a>
+        <a href="/portfolio" class="navigation--link">Portfolio</a>
+        <a href="/music" class="navigation--link">Music</a>
+        <a href="/contact" class="navigation--link">Contact</a>
       </nav>
 
 
@@ -44,137 +43,150 @@
       
 <div class="above-fold">
   <h1 class="home-headline headline">A full-stack developer</h1>
-  <p class="home-tagline">Hi, I'm Joey, part designer and part engineer. I write code in JavaScript, HTML, SASS, and PHP. I enjoy the full-stack and take projects from inception through completion.</p>
+  <p class="home-tagline">Hi, I'm Joey Lea - part designer and part engineer. I write code in JavaScript, HTML, Sass, and PHP. I enjoy the full-stack and take projects from inception through completion.</p>
   <p class="home-tagline">
-    <a href="/2015-in-a-flash/" class="tagline-link">My year in a flash - 2015</a>
+    <!-- <a href="/2015-in-a-flash/" class="tagline-link">My year in a flash - 2015</a> -->
     <!-- <a href="/2015-in-a-flash/" class="tagline-link">Juiced, a Flexbox framework</a> -->
   </p>
 </div>
 
-<div class="project-ribbon" id="project-ribbon">
-  <div class="ribbon--content">
-    <h3 class="ribbon-headline headline">Well hello, Beautiful!</h3>
-    <!-- <h3 class="ribbon-headline headline">Howdy, Partner!</h3> -->
-    <p class="ribbon-p">Thanks for swinging by.
-      I'm currently in Orlando, FL where it's 80&deg;F with <span id="weather-main">clouds</span>.
-    </p>
-    <hr class="no-js-hide" />
-    <p class="ribbon-p no-js-hide">
-      <strong>
-        <a href="#more" id="more-on-me">More on me &rarr;</a>
-      </strong>
-    </p>
 
-    <!-- <p class="ribbon-p">
-      <strong>
-        <a href="#lets-chat">Lets chat &rarr;</a>
-      </strong>
-    </p> -->
-    <hr class="no-js-hide" />
-    <h4 class="ribbon-subheadline headline">Recent Blog Posts</h4>
-    <ul class="ribbon-blog-posts">
-      <a href="blog" class="blog-post">
-      <li>
-        Silence: the strange status quo
-      </li>
-      </a>
-      <a href="blog" class="blog-post">
-        <li>
-          Build it but will they come?
-        </li>
-      </a>
-    </ul>
-
-  </div>
-</div>
-<div class="ribbon-behind project-ribbon">
-  <div class="joey-circle">
-    <h2 class="subheadline">MORE ON ME</h2>
-    <!-- <img src="/img/joey_drink.png" class="radius img"> -->
-    <ul class="more-on-me-list">
-      <li>I am <span id="age-in-days">9740</span> days old</li>
-      <li>I love technology (and food)</li>
-      <li>I sing, play instruments, and write and record music</li>
-      <li>I enjoy staying active</li>
-      <li>When coding, I primarily use Atom, Sublime Text, and PhpStorm; occasionally Coda</li>
-      <li>I am an avid Apple user</li>
-      <li>I use many CLI tools, frameworks and libraries.  Some include: git, bower, npm, gulp, Metalsmith, Vue, Laravel, jQuery </li>
-    </ul>
-
-    <a href="#" class="exit-link more-on-me">&larr; <strong>back</strong></a>
-
-  </div>
-</div>
+      <div class="project-ribbon" id="project-ribbon">
+        <div class="ribbon--content">
+          <h3 class="ribbon-headline headline">Well hello, Beautiful!</h3>
+          <!-- <h3 class="ribbon-headline headline">Howdy, Partner!</h3> -->
+          <p class="ribbon-p">Thanks for swinging by.
+            I'm currently in Orlando, FL where it's <span id="temp-outside-f">80</span>&deg;F with <span id="weather-desc">clouds</span>.
+          </p>
+          <hr class="no-js-hide" />
+          <p class="ribbon-p no-js-hide">
+            <strong>
+              <a href="#more" id="more-on-me">More on me &rarr;</a>
+            </strong>
+          </p>
 
 
-<div class="instafeed">
-  <div class="instagram-container noselect">
-    <div class="instagram-header">
-      <a href="https://instagram.com/ovdojoey/" target="_blank">
-        <span class="insta-text-block">
-          <img src="/img/Instagram_Glyph.png" class="insta_glyph" role="presentation">
-          <small>//</small> MY<span class="quite-boring text-muted"> &nbsp;fairly tame</span> <span class="color-brand">Instagram</span>
-        </span>
-      </a>
-      <div>
+          <hr class="no-js-hide" />
+          <h4 class="ribbon-subheadline headline">Recent Blog Posts</h4>
+          <ul class="ribbon-blog-posts">
 
-        <a id="shuffle_insta" data-scramble="false">
-          <img src="/img/rotate.png" alt="Rotate" class="rotate">
-          <div class="shuffle_caption">
-            <span class="shuffled">Shake it up</span>
-            <span class="neat">I like things neat</span>
+              <a href="/blog/building-a-website-with-metalsmith.html" class="blog-post">
+                <li>
+                  A Metalsmith Website
+                </li>
+              </a>
+              <a href="/blog/building-a-mobile-app-using-javascript-html5-and-css.html" class="blog-post">
+                <li>
+                  Building a mobile app
+                </li>
+              </a>
+              <a href="/blog/build-it-but-will-they-visit.html" class="blog-post">
+                <li>
+                  Build it, but will they visit?
+                </li>
+              </a>
+
+
+
+          </ul>
+
+        </div>
+      </div>
+      <div class="ribbon-behind project-ribbon">
+        <div class="joey-circle">
+          <h2 class="subheadline">MORE ON ME</h2>
+          <!-- <img src="/img/joey_drink.png" class="radius img"> -->
+          <ul class="more-on-me-list">
+            <li>I am <span id="age-in-days">9740</span> days old</li>
+            <li>I love technology (and food)</li>
+            <li>I sing, play instruments, and write and record music just typically not in public</li>
+            <li>I enjoy staying active</li>
+            <li>When coding, I primarily use Atom, Sublime Text, and PhpStorm; occasionally Coda</li>
+            <li>I am an avid Apple user</li>
+            <li>I use many CLI tools, frameworks and libraries.  Some include: git, bower, npm, gulp, Metalsmith, Vue, Laravel, jQuery </li>
+          </ul>
+
+          <a href="#home" class="exit-link more-on-me">&larr; <strong>back</strong></a>
+
+        </div>
+      </div>
+
+
+      <div class="instafeed">
+        <div class="instagram-container noselect">
+          <div class="instagram-header">
+            <a href="https://instagram.com/ovdojoey/" target="_blank">
+              <span class="insta-text-block">
+                <img src="/img/Instagram_Glyph.png" class="insta_glyph" role="presentation">
+                <small>//</small> MY<span class="quite-boring text-muted"> &nbsp;really lame</span> <span class="color-brand">Instagram</span>
+              </span>
+            </a>
+            <div>
+
+              <a id="shuffle_insta" data-scramble="false">
+                <img src="/img/rotate.png" alt="Rotate" class="rotate">
+                <div class="shuffle_caption">
+                  <span class="shuffled">Shake it up</span>
+                  <span class="neat">I like things neat</span>
+                </div>
+              </a>
+            </div>
           </div>
-        </a>
+          <noscript>
+            <p style="text-align:center; position: absolute; margin-top: -100px; padding: 100px 20px; background:rgba(244,195,196, 0.8); color: #222; font-size: 2rem;">
+              Bummer, JavaScript is not enabled and this section will not work.   Consider enabling JavaScript to continue.
+            </p>
+          </noscript>
+          <section class="instagram">
+            <div class="insta_posts_container" id="insta_posts_container">
+              <ul class="posts" id="insta_posts" data-scramble="false">
+                <!-- AJAX posts -->
+              </ul>
+            </div>
+          </section>
+        </div>
       </div>
+
+
     </div>
-    <noscript>
-      <p style="text-align:center; position: absolute; margin-top: -100px; padding: 100px 20px; background:rgba(244,195,196, 0.8); color: #222; font-size: 2rem;">
-        Bummer, JavaScript is not enabled and this section will not work.   Consider enabling JavaScript to continue.
-      </p>
-    </noscript>
-    <section class="instagram">
-      <div class="insta_posts_container" id="insta_posts_container">
-        <ul class="posts" id="insta_posts" data-scramble="false">
-          <!-- AJAX posts -->
-        </ul>
-      </div>
-    </section>
+  </section>
+  <section class="body-img hue-rotate" id="body-img"></section>
+
+<div class="footer">
+  <div class="container">
+    <div class="copyright">
+      <span class="tk-futura-pt">&copy; 2016 <span>JL</span>.  &nbsp; All Rights Reserved.</span>
+      <div class="hand-craft">This site was <a href="/humans.txt" target="_blank">hand-crafted</a>.</div>
+    </div>
   </div>
 </div>
 
 
+<script>
+     (function() {
+         'use strict';
+         var htmlEle = document.documentElement;
+         var exitTimeout = false;
+         var timeout;
 
-    </div>
+         function fireJSAnimation () {
+           htmlEle.classList.remove("hide-js");
+           htmlEle.classList.add("show-js");
+         }
 
-  </section>
-  <section class="body-img" id="body-img">
+         timeout = setTimeout(function () {
+           fireJSAnimation();
+           exitTimeout = true;
+         }, 800);
 
-  </section>
-  <script>
-       (function() {
-           'use strict';
-           var htmlEle = document.documentElement;
-           var exitTimeout = false;
-           var timeout;
-
-           function fireJSAnimation () {
-             htmlEle.classList.remove("hide-js");
-             htmlEle.classList.add("show-js");
-           }
-
-           timeout = setTimeout(function() {
+         window.onload = function () {
+           if (!exitTimeout) {
+             clearTimeout(timeout);
              fireJSAnimation();
-             exitTimeout = true;
-           }, 400);
-
-           window.onload = function () {
-             if (!exitTimeout) {
-               clearTimeout(timeout);
-               fireJSAnimation();
-             }
            }
-       })();
-   </script>
-  <script src="/js/jl.min.js"></script>
+         }
+     })();
+ </script>
+<script src="/js/jl.min.js"></script>
 </body>
 </html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Joey Lea | Portfolio</title>
+  <script>
+       (function() {
+           'use strict';
+           var htmlEle = document.documentElement;
+           htmlEle.className = "js hide-js";
+       })();
+   </script>
+  <script src="https://use.typekit.net/pnc6egy.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
+  <link rel="stylesheet" href="/css/jl.css">
+</head>
+<body class=" portfolio">
+
+  <header class="header">
+
+    <div class="container">
+
+      <div class="logo">
+        <a href="/" class="logo--link">JL</a>
+      </div>
+
+      <nav class="navigation">
+        <a href="/blog" class="navigation--link">Blog</a>
+        <a href="/portfolio" class="navigation--link">Portfolio</a>
+        <a href="/music" class="navigation--link">Music</a>
+        <a href="/contact" class="navigation--link">Contact</a>
+      </nav>
+
+
+    </div>
+
+  </header>
+
+  <section class="body">
+    <div class="container">
+
+      
+<div class="above-fold">
+  <h1 class="home-headline headline">A sampling of my work</h1>
+
+  <blockquote class="home-tagline">
+    <p>
+      &quot;There is nothing noble in being superior to your fellow man; true nobility is being superior to your former self.&quot;
+    </p>
+    <cite>― Ernest Hemingway</cite>
+
+  </blockquote>
+  <h2 class="headline home-headline h2">Projects in 2015</h2>
+  <ul class="list-links">
+    <li>
+      <a href="juiced.html" class="list-link">Juiced - a CSS Framework</a>
+    </li>
+    <li>
+      <a href="pates-law.html" class="list-link">Pates Law Group - Orlando Attorneys</a>
+    </li>
+    <li>
+      <a href="promo-only-uk.html" class="list-link">Promo Only UK / Europe</a>
+    </li>
+    <li>
+      <a href="web-time-tracker.html" class="list-link">Web Time Tracker - a Chrome Extension</a>
+    </li>
+    <li>
+      <a href="timeline.html" class="list-link">Timeline</a>
+    </li>
+
+  </ul>
+
+  <h2 class="headline home-headline h2">Projects in 2014</h2>
+  <ul class="list-links">
+    <li>
+      <a href="welli.html" class="list-link">Welli - a Health Tracking Tool</a>
+    </li>
+    <li>
+      <a href="the-brick-story.html" class="list-link">The Brick Story - a  Wedding Website</a>
+    </li>
+    <li>
+      <a href="mobile-beat.html" class="list-link">Mobile Beat - DJ Magazine</a>
+    </li>
+    <li>
+      <a href="anne-marie-bowen.html" class="list-link">Anne-Marie Bowen - Orlando Bankruptcy Attorney</a>
+    </li>
+    <li>
+      <a href="promo-only.html" class="list-link">Promo Only</a>
+    </li>
+    <li>
+      <a href="pom.html" class="list-link">POM - Orders Management System</a>
+    </li>
+  </ul>
+
+</div>
+<div class="project-ribbon" id="project-ribbon">
+
+</div>
+<div class="ribbon-behind project-ribbon">
+</div>
+
+
+    </div>
+  </section>
+  <section class="body-img portfolio" id="body-img"></section>
+
+<div class="footer">
+  <div class="container">
+    <div class="copyright">
+      <span class="tk-futura-pt">&copy; 2016 <span>JL</span>.  &nbsp; All Rights Reserved.</span>
+      <div class="hand-craft">This site was <a href="/humans.txt" target="_blank">hand-crafted</a>.</div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+     (function() {
+         'use strict';
+         var htmlEle = document.documentElement;
+         var exitTimeout = false;
+         var timeout;
+
+         function fireJSAnimation () {
+           htmlEle.classList.remove("hide-js");
+           htmlEle.classList.add("show-js");
+         }
+
+         timeout = setTimeout(function () {
+           fireJSAnimation();
+           exitTimeout = true;
+         }, 800);
+
+         window.onload = function () {
+           if (!exitTimeout) {
+             clearTimeout(timeout);
+             fireJSAnimation();
+           }
+         }
+     })();
+ </script>
+<script src="/js/jl.min.js"></script>
+</body>
+</html>

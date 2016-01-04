@@ -1,80 +1,12 @@
-<!DOCTYPE html>
-<html lang="en" class="no-js">
-<head>
-  <meta charset="UTF-8">
-  <title>{{title}}</title>
-  <script>
-       (function() {
-           'use strict';
-           var htmlEle = document.documentElement;
-           htmlEle.classList.remove("no-js");
-           htmlEle.classList.add("js");
-           htmlEle.classList.add("hide-js");
-           htmlEle.className = "js hide-js";
-       })();
-   </script>
-  <script src="https://use.typekit.net/pnc6egy.js"></script>
-  <script>try{Typekit.load({ async: true });}catch(e){}</script>
-  <link rel="stylesheet" href="/css/jl.css">
-</head>
-<body>
-  <header class="header">
-
-    <div class="container">
-
-      <div class="logo">
-        <a href="/" class="logo--link">JL</a>
-      </div>
-
-      <nav class="navigation">
-        <a href="/about" class="navigation--link">About</a>
-        <a href="/about" class="navigation--link">Portfolio</a>
-        <a href="/about" class="navigation--link">Music</a>
-        <a href="/about" class="navigation--link">Contact</a>
-      </nav>
-
-
-    </div>
-
-  </header>
+{{> header }}
 
   <section class="body">
     <div class="container">
 
       {{{contents}}}
 
-
     </div>
-
   </section>
-  <section class="body-img" id="body-img">
+  <section class="body-img {{ bodyImgClass }}" id="body-img"></section>
 
-  </section>
-  <script>
-       (function() {
-           'use strict';
-           var htmlEle = document.documentElement;
-           var exitTimeout = false;
-           var timeout;
-
-           function fireJSAnimation () {
-             htmlEle.classList.remove("hide-js");
-             htmlEle.classList.add("show-js");
-           }
-
-           timeout = setTimeout(function() {
-             fireJSAnimation();
-             exitTimeout = true;
-           }, 400);
-
-           window.onload = function () {
-             if (!exitTimeout) {
-               clearTimeout(timeout);
-               fireJSAnimation();
-             }
-           }
-       })();
-   </script>
-  <script src="/js/jl.min.js"></script>
-</body>
-</html>
+{{> footer }}

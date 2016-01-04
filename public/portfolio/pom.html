@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Orders Management | Joey Lea</title>
+  <script>
+       (function() {
+           'use strict';
+           var htmlEle = document.documentElement;
+           htmlEle.className = "js hide-js";
+       })();
+   </script>
+  <script src="https://use.typekit.net/pnc6egy.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
+  <link rel="stylesheet" href="/css/jl.css">
+</head>
+<body class=" portfolio">
+
+  <header class="header">
+
+    <div class="container">
+
+      <div class="logo">
+        <a href="/" class="logo--link">JL</a>
+      </div>
+
+      <nav class="navigation">
+        <a href="/blog" class="navigation--link">Blog</a>
+        <a href="/portfolio" class="navigation--link">Portfolio</a>
+        <a href="/music" class="navigation--link">Music</a>
+        <a href="/contact" class="navigation--link">Contact</a>
+      </nav>
+
+
+    </div>
+
+  </header>
+
+  <section class="body">
+    <div class="container">
+
+      <div class="above-fold">
+        
+  <nav aria-label="breadcrumb" role="navigation" class="breadcrumb-nav">
+    <ul class="breadcrumb">
+      <li><a href="/" aria-level="1">Home</a></li>
+      <li><a href="/portfolio" aria-level="2">Portfolio</a></li>
+      <li><a href="#" class="active" aria-level="3">Orders Management</a></li>
+    </ul>
+  </nav>
+
+  <h1 class="home-headline headline">Orders Management</h1>
+
+  <p class="home-tagline">
+    In 2013, Promo Only was using outdated billing software and had no way to effectively process online orders.  I was tasked with building a new online based
+    system to replace outdated in-house ordering tools.  Using PHP and the Paypal API, I developed a new system for our sales reps to process orders.
+     These tools would later be migrated to the PromoOnly.com website.
+  </p>
+
+
+          <a href="promo-only.html" class="up-next">
+            <span class="next-title previous"><span class="arrow">&larr;</span></span>
+            <span class="title previous">Promo Only</span>
+          </a>
+
+
+      </div>
+
+    </div>
+
+  </section>
+  <section class="body-img portfolio pom" id="body-img"></section>
+
+
+<div class="footer">
+  <div class="container">
+    <div class="copyright">
+      <span class="tk-futura-pt">&copy; 2016 <span>JL</span>.  &nbsp; All Rights Reserved.</span>
+      <div class="hand-craft">This site was <a href="/humans.txt" target="_blank">hand-crafted</a>.</div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+     (function() {
+         'use strict';
+         var htmlEle = document.documentElement;
+         var exitTimeout = false;
+         var timeout;
+
+         function fireJSAnimation () {
+           htmlEle.classList.remove("hide-js");
+           htmlEle.classList.add("show-js");
+         }
+
+         timeout = setTimeout(function () {
+           fireJSAnimation();
+           exitTimeout = true;
+         }, 800);
+
+         window.onload = function () {
+           if (!exitTimeout) {
+             clearTimeout(timeout);
+             fireJSAnimation();
+           }
+         }
+     })();
+ </script>
+<script src="/js/jl.min.js"></script>
+</body>
+</html>

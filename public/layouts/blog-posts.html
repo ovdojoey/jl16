@@ -1,0 +1,45 @@
+{{> header }}
+
+  <section class="body">
+    <div class="container">
+
+      <div class="above-fold">
+
+
+        <h1 class="home-headline headline">{{{displayTitle}}}</h1>
+
+
+        {{{contents}}}
+
+        <ul class="blog-posts-list">
+          {{#each blog}}
+            <li class="post">
+              <a class="displayTitle" href="/blog/{{{filename}}}">{{{displayTitle}}}</a>
+              <span class="postedDate">{{postedDate}}</span>
+              <span class="tags"><strong>covers:</strong> {{tags}}</span>
+            </li>
+          {{/each}}
+        </ul>
+
+      </div>
+
+
+      <div class="project-ribbon" id="project-ribbon">
+        <div class="blog-post-summary">
+          <dl class="blog-post-dl">
+            <dt class="headline">Blog Posts</dt>
+            <dd>{{collections.blog.length}}</dd>
+            <dt class="headline">Most Recent Post</dt>
+            <dd><a class="title-post" href="/blog/{{{blog.0.filename}}}">{{blog.0.displayTitle}}</a><span class="time-format">on {{ blog.0.postedDate }}</span></dd>
+          </dl>
+        </div>
+      </div>
+
+
+    </div>
+
+  </section>
+  <section class="body-img {{ bodyImgClass }}" id="body-img"></section>
+
+
+{{> footer }}

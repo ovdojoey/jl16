@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1000 1473.6" style="enable-background:new 0 0 1000 1473.6;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#E55151;stroke-width:80;stroke-miterlimit:10;}
+	.st1{fill:#FFFFFF;stroke:#E55151;stroke-width:12;stroke-miterlimit:10;}
+	.st2{fill:#DB4F4F;}
+	.st3{font-family:'Futura-Medium';}
+	.st4{font-size:36px;}
+</style>
+<font horiz-adv-x="2048">
+<!-- Futura is a registered trademark of Bauer Types SA. Unauthorised use prohibited. ALL RIGHTS RESERVED. Neufville Digital is a trademark of Visualogik, used with the permission of Neufville SL. -->
+<!-- Copyright: Copyright 2016 Adobe System Incorporated. All rights reserved. -->
+<font-face font-family="Futura-Medium" units-per-em="2048" underline-position="-200" underline-thickness="160"/>
+<missing-glyph horiz-adv-x="1024" d="M200,0l0,1544l624,0l0,-1544M781,43l0,1458l-538,0l0,-1458z"/>
+<glyph unicode="0" horiz-adv-x="1264" d="M87,782C87,1028 144,1224 259,1371C362,1504 486,1570 632,1570C778,1570 902,1504 1005,1371C1120,1224 1177,1025 1177,772C1177,520 1120,321 1005,174C902,41 778,-25 633,-25C488,-25 363,41 259,174C144,321 87,523 87,782M316,781C316,610 346,467 405,354C464,243 540,187 632,187C723,187 799,243 859,354C919,465 949,604 949,773C949,942 919,1082 859,1193C799,1304 723,1359 632,1359C541,1359 466,1304 406,1193C346,1083 316,946 316,781z"/>
+<glyph unicode="1" horiz-adv-x="1264" d="M555,1326l-267,0l128,218l372,0l0,-1544l-233,0z"/>
+<glyph unicode="2" horiz-adv-x="1264" d="M513,219l575,0l0,-219l-1037,0l536,649C640,714 684,770 720,817C755,864 782,904 801,936C839,999 858,1055 858,1105C858,1177 833,1237 782,1286C731,1335 669,1359 594,1359C438,1359 349,1267 326,1082l-232,0C131,1407 296,1570 587,1570C728,1570 846,1525 941,1436C1037,1347 1085,1236 1085,1104C1085,1020 1063,938 1018,857C995,815 962,765 919,708C875,650 820,582 753,503z"/>
+<glyph unicode="3" horiz-adv-x="1264" d="M530,717l0,199C629,916 695,927 729,949C790,988 820,1050 820,1135C820,1201 798,1255 754,1296C711,1338 654,1359 585,1359C520,1359 470,1343 435,1312C401,1280 376,1226 359,1150l-232,0C151,1295 200,1402 275,1470C350,1537 454,1571 588,1571C723,1571 834,1531 919,1451C1004,1372 1047,1269 1047,1144C1047,1003 991,893 879,814C1007,739 1071,616 1071,447C1071,308 1024,195 931,107C838,19 718,-25 572,-25C386,-25 248,43 158,180C121,237 97,317 87,418l225,0C324,343 353,286 400,247C446,207 506,187 581,187C656,187 719,212 768,262C817,313 842,378 842,457C842,561 805,635 731,679C688,704 621,717 530,717z"/>
+<glyph unicode="4" horiz-adv-x="1264" d="M1010,431l164,0l0,-212l-164,0l0,-219l-233,0l0,219l-758,0l991,1440M777,431l0,517l-356,-517z"/>
+</font>
+
+	<line class="st0" x1="470" y1="-52.4" x2="470" y2="847.6"/>
+<circle class="st1" cx="469.5" cy="1115.8" r="288.6"/>
+<circle class="st1" cx="469.2" cy="600.4" r="85.8"/>
+<text transform="matrix(1 0 0 1 577.6367 600.4319)" class="st2 st3 st4">2014</text>
+<circle class="st1" cx="470.2" cy="186.4" r="85.8"/>
+<text transform="matrix(1 0 0 1 577.6365 186.432)" class="st2 st3 st4">2013</text>
+</svg>

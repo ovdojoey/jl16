@@ -1,0 +1,28 @@
+____________________
+CREDITS
+
+
+This website was hand-crafted by Joey Lea.
+View the source and tooling setup at: https://www.github.com/ovdojoey/jl16
+
+
+
+
+____________________
+TECHNOLOGY
+
+Git
+Metalsmith
+Autoprefixer
+Sass
+Uglify
+
+
+
+
+
+____________________
+SITE
+
+Last update: 2016 / January
+Software: Atom, Photoshop, Illustrator, Chrome

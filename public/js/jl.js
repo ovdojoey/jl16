@@ -3,11 +3,15 @@
 // http://api.openweathermap.org/data/2.5/weather?zip=32820,us&appid=5d87307ec2ac976e394333baaa93c861&units=imperial
 
 
-
+// homepage functions
 (function(){
   'use strict';
   var projectRibbon = document.getElementById("project-ribbon");
   var bodyImg = document.getElementById("body-img");
+
+  if (!projectRibbon) {
+    return false;
+  }
 
   var panels = {
     toggleSlash: function () {
@@ -17,22 +21,57 @@
     reset: function () {
       projectRibbon.classList.remove("slash");
       bodyImg.classList.remove("dim");
-
     }
   };
 
   function checkHashState () {
+
     var _hash = location.hash;
     if( _hash === "#more" ) {
       panels.toggleSlash();
     }
-    if ( _hash === '' ) {
+    if ( _hash === '' || _hash === '#home' ) {
       panels.reset();
     }
     // console.log( _hash );
   }
   window.addEventListener("hashchange", checkHashState, false);
   checkHashState();
+
+})();
+
+
+// music page functions
+(function(){
+  'use strict';
+  var musicPlayerModal = document.getElementById("music-player-modal");
+  var exitPlayerBtn = document.getElementById("body-img");
+
+  function checkHashState () {
+
+    var _hash = location.hash;
+    if( _hash === "#player" ) {
+      player.open();
+    }
+    if ( _hash === '' || _hash === '#home' ) {
+      player.close();
+    }
+    // console.log( _hash );
+  }
+
+  if (musicPlayerModal) {
+    var player = {
+      open: function () {
+        musicPlayerModal.classList.toggle("activate");
+      },
+      close: function () {
+        musicPlayerModal.classList.remove("activate");
+      }
+    };
+
+    window.addEventListener("hashchange", checkHashState, false);
+    checkHashState();
+  }
 
 })();
 
@@ -61,18 +100,25 @@
     window.requestAnimationFrame(step);
   }
 
-  thedaysSinceBirth();
+  if (ageInDaysDiv) {
+    thedaysSinceBirth();
+  }
 
 
 })();
 
 (function() {
+
   var
   insta_posts_holder = document.getElementById('insta_posts'),
   insta_posts_mover = document.getElementById('insta_posts_container'),
-  insta_shuffle = document.getElementById('shuffle_insta'),
-  insta_shuffled = insta_posts_holder.getAttribute("data-scramble"),
-  insta_count = 0,
+  insta_shuffle = document.getElementById('shuffle_insta');
+
+  if (insta_posts_holder) {
+    var insta_shuffled = insta_posts_holder.getAttribute("data-scramble");
+  }
+
+  var insta_count = 0,
   window_width = window.innerWidth,
   window_diff = 0,
   window_offsetLeft = 0;
@@ -207,9 +253,21 @@
 
   function loadWeather(json) {
     var weather = JSON.parse(json);
-    console.log(weather);
+    var weatherDomEles = {
+      temp: document.getElementById("temp-outside-f"),
+      description: document.getElementById("weather-desc"),
+    };
+
+    var temp = weather.main.temp;
+    var weatherDesc = weather.weather[0].description;
+
+    if(weatherDomEles.temp) {
+      weatherDomEles.temp.innerText = temp;
+      weatherDomEles.description.innerText = weatherDesc;
+    }
 
   }
+
   function failedWeather() {
     console.log("Error loading weather");
   }
@@ -239,8 +297,11 @@
 
   function init() {
 
-    ajaxRequest("instafeed.php", loadInstaG, failedInstag);
-    ajaxRequest("weatherfeed.php", loadWeather, failedWeather);
+    if (insta_posts_holder) {
+      ajaxRequest("/instafeed.php", loadInstaG, failedInstag);
+    }
+
+    ajaxRequest("/weatherfeed.php", loadWeather, failedWeather);
 
 
     // resize window width if changes
@@ -249,13 +310,9 @@
     };
 
     var newImage = new imgPreloader();
-    newImage.addImages(["/img/color.jpg","/img/hammer.jpg","/img/spark.jpg","/img/juiced.jpg",]);
-
+    newImage.addImages(["/img/rotary_drawing.png","/img/color_blot.jpg","/img/color_samples.jpg", "/img/spark.jpg","/img/juiced.jpg","/img/piano.jpg"]);
   }
 
-
-
-
-
   init();
+
 })();

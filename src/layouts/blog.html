@@ -1,0 +1,50 @@
+{{> header }}
+
+  <section class="body">
+    <div class="container">
+
+      <div class="above-fold blog-post">
+
+        <nav aria-label="breadcrumb" role="navigation" class="breadcrumb-nav">
+          <ul class="breadcrumb">
+            <li><a href="/" aria-level="1">Home</a></li>
+            <li><a href="/blog" aria-level="2">Blog</a></li>
+            <li><a href="#" class="active" aria-level="3">{{displayTitle}}</a></li>
+          </ul>
+        </nav>
+
+        <h1 class="home-headline headline">{{displayTitle}}</h1>
+
+        <time datetime="{{date}}" class="blog-datetime">
+          {{postedDate}}
+        </time>
+
+
+        {{{contents}}}
+
+        <div class="blog-tags"><div class="tagged-under">tagged under:</div> {{tags}}</div>
+
+
+        {{#if previous.filename}}
+          <a href="{{previous.filename}}" class="up-next">
+            <span class="next-title previous"><span class="arrow">&larr;</span></span>
+            <span class="title previous">{{previous.displayTitle}}</span>
+          </a>
+        {{/if}}
+
+        {{#if next.filename}}
+          <a href="{{next.filename}}" class="up-next">
+            <span class="next-title"><span class="up-next-text">UP NEXT</span> <span class="arrow">&rarr;</span></span>
+            <span class="title">{{next.displayTitle}}</span>
+          </a>
+        {{/if}}
+
+      </div>
+
+    </div>
+
+  </section>
+  <section class="body-img {{ bodyImgClass }}" id="body-img"></section>
+
+
+{{> footer }}

@@ -1,0 +1,101 @@
+{{> header }}
+
+  <section class="body">
+    <div class="container">
+
+      {{{contents}}}
+
+      <div class="project-ribbon" id="project-ribbon">
+        <div class="ribbon--content">
+          <h3 class="ribbon-headline headline">Well hello, Beautiful!</h3>
+          <!-- <h3 class="ribbon-headline headline">Howdy, Partner!</h3> -->
+          <p class="ribbon-p">Thanks for swinging by.
+            I'm currently in Orlando, FL where it's <span id="temp-outside-f">80</span>&deg;F with <span id="weather-desc">clouds</span>.
+          </p>
+          <hr class="no-js-hide" />
+          <p class="ribbon-p no-js-hide">
+            <strong>
+              <a href="#more" id="more-on-me">More on me &rarr;</a>
+            </strong>
+          </p>
+
+
+          <hr class="no-js-hide" />
+          <h4 class="ribbon-subheadline headline">Recent Blog Posts</h4>
+          <ul class="ribbon-blog-posts">
+
+            {{#each latestBlog}}
+              <a href="/blog/{{filename}}" class="blog-post">
+                <li>
+                  {{{displayTitle}}}
+                </li>
+              </a>
+            {{/each}}
+
+
+
+          </ul>
+
+        </div>
+      </div>
+      <div class="ribbon-behind project-ribbon">
+        <div class="joey-circle">
+          <h2 class="subheadline">MORE ON ME</h2>
+          <!-- <img src="/img/joey_drink.png" class="radius img"> -->
+          <ul class="more-on-me-list">
+            <li>I am <span id="age-in-days">9740</span> days old</li>
+            <li>I love technology (and food)</li>
+            <li>I sing, play instruments, and write and record music just typically not in public</li>
+            <li>I enjoy staying active</li>
+            <li>When coding, I primarily use Atom, Sublime Text, and PhpStorm; occasionally Coda</li>
+            <li>I am an avid Apple user</li>
+            <li>I use many CLI tools, frameworks and libraries.  Some include: git, bower, npm, gulp, Metalsmith, Vue, Laravel, jQuery </li>
+          </ul>
+
+          <a href="#home" class="exit-link more-on-me">&larr; <strong>back</strong></a>
+
+        </div>
+      </div>
+
+
+      <div class="instafeed">
+        <div class="instagram-container noselect">
+          <div class="instagram-header">
+            <a href="https://instagram.com/ovdojoey/" target="_blank">
+              <span class="insta-text-block">
+                <img src="/img/Instagram_Glyph.png" class="insta_glyph" role="presentation">
+                <small>//</small> MY<span class="quite-boring text-muted"> &nbsp;really lame</span> <span class="color-brand">Instagram</span>
+              </span>
+            </a>
+            <div>
+
+              <a id="shuffle_insta" data-scramble="false">
+                <img src="/img/rotate.png" alt="Rotate" class="rotate">
+                <div class="shuffle_caption">
+                  <span class="shuffled">Shake it up</span>
+                  <span class="neat">I like things neat</span>
+                </div>
+              </a>
+            </div>
+          </div>
+          <noscript>
+            <p style="text-align:center; position: absolute; margin-top: -100px; padding: 100px 20px; background:rgba(244,195,196, 0.8); color: #222; font-size: 2rem;">
+              Bummer, JavaScript is not enabled and this section will not work.   Consider enabling JavaScript to continue.
+            </p>
+          </noscript>
+          <section class="instagram">
+            <div class="insta_posts_container" id="insta_posts_container">
+              <ul class="posts" id="insta_posts" data-scramble="false">
+                <!-- AJAX posts -->
+              </ul>
+            </div>
+          </section>
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+  <section class="body-img {{ bodyImgClass }}" id="body-img"></section>
+
+{{> footer }}
