@@ -33,7 +33,7 @@ body {
   width: 100%;
   height: 100%;
   min-height: 100vh;
-  background: url(/img/beach_light.svg) 101% 0% no-repeat;
+  background: url(/img/beach_light.jpg) 101% 0% no-repeat;
   background-size: 1000px;
 
   z-index: -1;
@@ -42,6 +42,30 @@ body {
   opacity: 0.38;
   &.hue-rotate {
     animation: throb 3s 1 alternate ease, hueRotate 225s infinite alternate ease;
+  }
+  &.hue-45{
+    filter: hue-rotate(45deg);
+  }
+  &.hue-90{
+    filter: hue-rotate(90deg);
+  }
+  &.hue-135{
+    filter: hue-rotate(135deg);
+  }
+  &.hue-180{
+    filter: hue-rotate(180deg);
+  }
+  &.hue-225{
+    filter: hue-rotate(225deg);
+  }
+  &.hue-270{
+    filter: hue-rotate(270deg);
+  }
+  &.hue-300{
+    filter: hue-rotate(255deg);
+  }
+  &.hue-345{
+    filter: hue-rotate(255deg);
   }
   @keyframes throb {
     0% {
@@ -66,12 +90,13 @@ body {
       background-position:420px 40%;
     }
     @media (min-width: $break-lg) {
-      background-position:720px 40%;
+      background-position:820px 40%;
     }
-    @media (min-width: 1700px) {
+    @media (min-width: 1800px) {
       background-position: 100% 40%;
     }
   }
+
   &.piano{
     background: url(/img/piano.jpg) 110% 40% no-repeat;
     background-size: 890px;
