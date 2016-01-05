@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Building a website with Metalsmith | Joey Lea</title>
+  <title>To use Flexbox or not | Joey Lea</title>
   <script>
        (function() {
            'use strict';
@@ -46,37 +46,42 @@
           <ul class="breadcrumb">
             <li><a href="/" aria-level="1">Home</a></li>
             <li><a href="/blog" aria-level="2">Blog</a></li>
-            <li><a href="#" class="active" aria-level="3">A Metalsmith Website</a></li>
+            <li><a href="#" class="active" aria-level="3">To use Flexbox or not</a></li>
           </ul>
         </nav>
 
-        <h1 class="home-headline headline">A Metalsmith Website</h1>
+        <h1 class="home-headline headline">To use Flexbox or not</h1>
 
-        <time datetime="Sun Jan 03 2016 19:00:00 GMT-0500 (EST)" class="blog-datetime">
+        <time datetime="Mon Jan 04 2016 19:00:00 GMT-0500 (EST)" class="blog-datetime">
           Monday, January 4, 2016
         </time>
 
 
-        
+        <p class="home-tagline">I recently ran into a problem where I needed to order something differently on mobile.  The problem occured on this very website, in fact - the blue ribbon on the <a href="/blog">blog</a> page.</p>
 
-  <p class="home-tagline">
-    Building this website was my first time using Metalsmith, and I must say... I really like it!
-    I think there are a few things that I need to improve in my flow
-    (like the file watchers -- currently I have to stop Node and restart to rebuild when a collection template or post changes; all other file changes are watched and rebuilt properly).
-  </p>
-  <p class="home-tagline">
-    There has been a few headaches though, namely Metalsmith Collections and working with the underlying data that gets created.  But, for the most part it's been a fun and smooth web building experience and it's helped me get better at tooling and project workflow.
-    My existing workflow was a simple gulpfile, and while this is similar, I believe Metalsmith is much more versatile and useful.
-  </p>
-  <p class="home-tagline">
-    I especially love the fact that I can add a simple HTML file that is tagged as a blog post or portfolio post, and the site rebuilds and takes care of itself to link assets together.
-  </p>
-  <p class="home-tagline">
-    I hope to be making another blog post about using Metalsmith with more in-depth techincal discussions.  Stay tuned.
-  </p>
+<p class="home-tagline">If you make websites you know this can be problematic.
+  When using a grid framework it can be done with column pushes and pulls &mdash; but those feel hacky. You can also change up your HTML source order and maybe also some CSS rules for that single component. Or you can use Flexbox.
+</p>
+<p class="home-tagline">For me, I'm not too worried about browser coverage here.
+  But, keep in mind, if a good portion of your users are stuck on IE9 you should probably reconsider using Flexbox.
+</p>
+<p class="home-tagline">In my case, a little Flexbox fixed everything.
+</p>
+<pre class="pre">
+  .blog-posts-container{
+    display: flex;
+    flex-wrap: wrap;
+    .above-fold{
+      order: 2;
+    }
+  }
+  .blog-posts-ribbon{
+    order: 1;
+  }
+</pre>
 
 
-        <div class="blog-tags"><div class="tagged-under">tagged under:</div> metalsmith, blog, static website, tooling</div>
+        <div class="blog-tags"><div class="tagged-under">tagged under:</div> flexbox, css, web design</div>
 
 
           <a href="to-use-flexbox-or-not.html" class="up-next">
@@ -84,9 +89,9 @@
             <span class="title previous">To use Flexbox or not</span>
           </a>
 
-          <a href="building-a-mobile-app-using-javascript-html5-and-css.html" class="up-next">
+          <a href="to-use-flexbox-or-not.html" class="up-next">
             <span class="next-title"><span class="up-next-text">UP NEXT</span> <span class="arrow">&rarr;</span></span>
-            <span class="title">Building a mobile app</span>
+            <span class="title">To use Flexbox or not</span>
           </a>
 
       </div>

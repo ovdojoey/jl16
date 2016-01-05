@@ -261,6 +261,10 @@
     var temp = weather.main.temp;
     var weatherDesc = weather.weather[0].description;
 
+    if (weatherDesc === "sky is clear") {
+      weatherDesc = "clear skies";
+    }
+
     if(weatherDomEles.temp) {
       weatherDomEles.temp.innerText = temp;
       weatherDomEles.description.innerText = weatherDesc;

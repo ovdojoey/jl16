@@ -1,0 +1,35 @@
+---
+layout: blog.html
+title: To use Flexbox or not | Joey Lea
+displayTitle: To use Flexbox or not
+bodyImgClass:  blog
+bodyClass: blog
+collection: blog
+date: 2016-01-05
+postedDate: Monday, January 4, 2016
+filename: to-use-flexbox-or-not.html
+draft: false
+tags: flexbox, css, web design
+---
+<p class="home-tagline">I recently ran into a problem where I needed to order something differently on mobile.  The problem occured on this very website, in fact - the blue ribbon on the <a href="/blog">blog</a> page.</p>
+
+<p class="home-tagline">If you make websites you know this can be problematic.
+  When using a grid framework it can be done with column pushes and pulls &mdash; but those feel hacky. You can also change up your HTML source order and maybe also some CSS rules for that single component. Or you can use Flexbox.
+</p>
+<p class="home-tagline">For me, I'm not too worried about browser coverage here.
+  But, keep in mind, if a good portion of your users are stuck on IE9 you should probably reconsider using Flexbox.
+</p>
+<p class="home-tagline">In my case, a little Flexbox fixed everything.
+</p>
+<pre class="pre">
+  .blog-posts-container{
+    display: flex;
+    flex-wrap: wrap;
+    .above-fold{
+      order: 2;
+    }
+  }
+  .blog-posts-ribbon{
+    order: 1;
+  }
+</pre>

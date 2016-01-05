@@ -1,14 +1,9 @@
-____________________
-CREDITS
-
-
 This website was hand-crafted by Joey Lea.
-View the source and tooling setup at: https://www.github.com/ovdojoey/jl16
+View the source and tooling setup at:
+https://www.github.com/ovdojoey/jl16
 
 
 
-
-____________________
 TECHNOLOGY
 
 Git
@@ -19,9 +14,6 @@ Uglify
 
 
 
-
-
-____________________
 SITE
 
 Last update: 2016 / January
