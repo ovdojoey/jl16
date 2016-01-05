@@ -49,25 +49,25 @@
         
 
         <ul class="blog-posts-list">
-            <li class="post">
+            <li class="post" data-post="0">
               <a class="displayTitle" href="/blog/to-use-flexbox-or-not.html">To use Flexbox or not</a>
               <span class="postedDate">Monday, January 4, 2016</span>
-              <span class="tags"><strong>tagged under:</strong> flexbox, css, web design</span>
+              <span class="tags"><strong>tagged under:</strong> <span class="tags-list" data-post=0 data-tags="flexbox, css, web design">flexbox, css, web design</span></span>
             </li>
-            <li class="post">
+            <li class="post" data-post="1">
               <a class="displayTitle" href="/blog/building-a-website-with-metalsmith.html">A Metalsmith Website</a>
               <span class="postedDate">Monday, January 4, 2016</span>
-              <span class="tags"><strong>tagged under:</strong> metalsmith, blog, static website, tooling</span>
+              <span class="tags"><strong>tagged under:</strong> <span class="tags-list" data-post=1 data-tags="metalsmith, blog, static website, tooling">metalsmith, blog, static website, tooling</span></span>
             </li>
-            <li class="post">
+            <li class="post" data-post="2">
               <a class="displayTitle" href="/blog/building-a-mobile-app-using-javascript-html5-and-css.html">Building a mobile app</a>
               <span class="postedDate">Sunday, January 3, 2016</span>
-              <span class="tags"><strong>tagged under:</strong> web development, javascript, html5, css</span>
+              <span class="tags"><strong>tagged under:</strong> <span class="tags-list" data-post=2 data-tags="web development, javascript, html5, css">web development, javascript, html5, css</span></span>
             </li>
-            <li class="post">
+            <li class="post" data-post="3">
               <a class="displayTitle" href="/blog/build-it-but-will-they-visit.html">Build it, but will they visit?</a>
               <span class="postedDate">Saturday, January 2, 2016</span>
-              <span class="tags"><strong>tagged under:</strong> web development,</span>
+              <span class="tags"><strong>tagged under:</strong> <span class="tags-list" data-post=3 data-tags="web development,">web development,</span></span>
             </li>
         </ul>
 
@@ -82,7 +82,7 @@
             <dt class="headline">Most Recent Post</dt>
             <dd><a class="title-post" href="/blog/to-use-flexbox-or-not.html">To use Flexbox or not</a><span class="time-format">on Monday, January 4, 2016</span></dd>
             <div class="headline dt">Filter Posts</div>
-            <input type="text" placeholder="Enter a tag or title" class="filter-blog-posts-input">
+            <input type="text" placeholder="Enter a tag" class="filter-blog-posts-input" id="filter-blog-posts">
           </dl>
         </div>
       </div>
@@ -98,7 +98,7 @@
   <div class="container">
     <div class="copyright">
       <span class="tk-futura-pt">&copy; 2016 <span>JL</span>.  &nbsp; All Rights Reserved.</span>
-      <div class="hand-craft">This site was <a href="/humans.txt" target="_blank">built by hand</a>.</div>
+      <div class="hand-craft">This site was <a href="/humans.txt" target="_blank">hand-crafted</a>.</div>
     </div>
   </div>
 </div>
@@ -132,3 +132,71 @@
 <script src="/js/jl.min.js"></script>
 </body>
 </html>
+
+<script>
+(function(){
+
+  var tagsToFilter = {};
+  var tagsArray = [].slice.call(document.querySelectorAll(".tags-list"));
+  var allPosts = [].slice.call(document.querySelectorAll("li.post"));
+
+  tagsArray.forEach( function (tags) {
+
+    var _tag = tags.dataset.tags || tags.getAttribute("data-tags");
+    var _post = tags.dataset.post || tags.getAttribute("data-post");
+
+    var _allTags = _tag.split(",");
+    _allTags.forEach( function (tag) {
+      tag = tag.replace('"','').trim();
+      if ( !tag ) {
+        return;
+      }
+      if ( tagsToFilter[tag] && tagsToFilter[tag].length > 0 ) {
+        tagsToFilter[tag].push(_post);
+      } else {
+        tagsToFilter[tag] = [ _post ];
+      }
+    });
+  } );
+  console.log(tagsToFilter);
+
+
+  function clearSearchedElements() {
+    allPosts.forEach( function (ele) {
+      ele.classList.remove("highlight");
+      ele.classList.remove("hide");
+    });
+  }
+
+  function hideAllElements() {
+    allPosts.forEach( function (ele) {
+      ele.classList.add("hide");
+    });
+  }
+
+  var filterInput = document.getElementById("filter-blog-posts");
+  filterInput.onchange = function(e) {
+    var _search = this.value;
+
+    if ( tagsToFilter[_search] ) {
+
+      hideAllElements();
+
+      var _results = tagsToFilter[_search];
+      _results.forEach( function ( post ) {
+        console.log(post);
+        _domHighLight = [].slice.call(document.querySelectorAll("[data-post='" + post + "']"));
+        _domHighLight.forEach( function (ele) {
+          ele.classList.add("highlight");
+        });
+      });
+    } else {
+      clearSearchedElements();
+    }
+
+  };
+
+})();
+
+
+</script>

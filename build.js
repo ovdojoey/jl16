@@ -25,7 +25,7 @@ Metalsmith(__dirname)
       reverse: true
     }
   }))
-  .use(filecheck)
+  // .use(filecheck)
   .use(layouts({
     "engine" : "handlebars",
     "directory" : "src/layouts",
@@ -40,19 +40,18 @@ Metalsmith(__dirname)
   .use(
     watch({
       paths: {
-        "${source}/**/*": "*",
-        "${source}/**/**/*": "*",
+        "${source}/**/*": true,
+        "${source}/**/**/*": true,
       },
       livereload: true,
     })
   )
   .build(function(err){
      if (err) throw err;
-     console.log(this._metadata.latestBlog[0]);
    });
 
    /**
-    * Concat plugin.
+    * Emtpy concat plugin.
     *
     * @param {Object} files
     * @param {Metalsmith} metalsmith
@@ -66,8 +65,7 @@ Metalsmith(__dirname)
       //  console.log(file);
 
        if ( files[file].collection && files[file].collection.length > 0 ) {
-        //  console.log( files[file].collection);
-        //  console.log( files[file] );
+
 
        }
       //  if ('.css' != extname(file)) continue;

@@ -39,7 +39,7 @@ body {
   z-index: -1;
   transition: opacity 600ms 50ms;
   animation: throb 4s 1 alternate ease;
-  opacity: 0.38;
+  opacity: 0.34;
   &.hue-rotate {
     animation: throb 3s 1 alternate ease, hueRotate 225s infinite alternate ease;
   }
@@ -823,11 +823,11 @@ blockquote.home-tagline{
   list-style: none;
   padding: 10px;
 
-  li{
+  li.post{
     padding: 10px 0 10px 0;
     margin-bottom: 15px;
     font-family: "ff-tisa-sans-web-pro", HelveticaNeue-Light, Helvetica Neue Light, Helvetica, sans-serif;
-
+    position: relative;;
     .displayTitle{
       font-family: "futura-pt", HelveticaNeue-Light, Helvetica Neue Light, Helvetica, sans-serif;
       font-size: 1.65rem;
@@ -839,6 +839,19 @@ blockquote.home-tagline{
     .tags{
       font-size: 12px;
       color: #666;
+    }
+
+    &.hide {
+      height: 0;
+      overflow :hidden;
+      width: 0;
+      position: absolute;
+    }
+    &.highlight {
+      height: auto;
+      overflow: visible;
+      width: auto;
+      position: relative;
     }
   }
 }
