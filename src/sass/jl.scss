@@ -667,8 +667,13 @@ body {
 
   a{
     color: $color-red;
+    color: rgba(#24b5a6, 0.95);
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 1.25rem;
+    transition: color 50ms;
+    &:hover{
+      color: darken(#209ed3, 50%);
+    }
   }
 }
 .hide-js .breadcrumb-nav{

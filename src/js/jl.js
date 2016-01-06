@@ -165,7 +165,7 @@
     if (_newPos < window_offsetLeft || _activeInstas === 0) {
       _shift = -115;
     } else {
-      _shift = (insta_shuffled === true) ? -75 : -135;
+      _shift = (insta_shuffled) ? -75 : -135;
     }
 
 
