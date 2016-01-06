@@ -25,18 +25,6 @@ Metalsmith(__dirname)
       reverse: true
     }
   }))
-  // .use(filecheck)
-  .use(layouts({
-    "engine" : "handlebars",
-    "directory" : "src/layouts",
-    "partials": "src/layouts/partials"
-  }))
-  .use(sass({
-    outputDir: 'css/'
-  }))
-  .use(autoprefixer())
-  .use(cleanCSS())
-  .use(uglify())
   .use(
     watch({
       paths: {
@@ -46,6 +34,18 @@ Metalsmith(__dirname)
       livereload: true,
     })
   )
+  // .use(filecheck)
+  .use(layouts({
+    "engine" : "handlebars",
+    "directory" : "src/layouts",
+    "partials": "src/layouts/partials"
+  }))
+  .use(sass({
+    outputDir: 'css/'
+  }))
+  .use(uglify())
+  .use(autoprefixer())
+  .use(cleanCSS())
   .build(function(err){
      if (err) throw err;
    });

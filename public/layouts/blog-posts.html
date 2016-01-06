@@ -33,6 +33,7 @@
             <dd><a class="title-post" href="/blog/{{{blog.0.filename}}}">{{blog.0.displayTitle}}</a><span class="time-format">on {{ blog.0.postedDate }}</span></dd>
             <div class="headline dt">Filter Posts</div>
             <input type="text" placeholder="Enter a tag" class="filter-blog-posts-input" id="filter-blog-posts">
+            <div class="results-found-box" id="results-found-box"><span id="num-results-found">0</span> results found. <a id="clear-results">clear</a></div>
           </dl>
         </div>
       </div>
@@ -46,70 +47,4 @@
 
 {{> footer }}
 
-<script>
-(function(){
-
-  var tagsToFilter = {};
-  var tagsArray = [].slice.call(document.querySelectorAll(".tags-list"));
-  var allPosts = [].slice.call(document.querySelectorAll("li.post"));
-
-  tagsArray.forEach( function (tags) {
-
-    var _tag = tags.dataset.tags || tags.getAttribute("data-tags");
-    var _post = tags.dataset.post || tags.getAttribute("data-post");
-
-    var _allTags = _tag.split(",");
-    _allTags.forEach( function (tag) {
-      tag = tag.replace('"','').trim();
-      if ( !tag ) {
-        return;
-      }
-      if ( tagsToFilter[tag] && tagsToFilter[tag].length > 0 ) {
-        tagsToFilter[tag].push(_post);
-      } else {
-        tagsToFilter[tag] = [ _post ];
-      }
-    });
-  } );
-  console.log(tagsToFilter);
-
-
-  function clearSearchedElements() {
-    allPosts.forEach( function (ele) {
-      ele.classList.remove("highlight");
-      ele.classList.remove("hide");
-    });
-  }
-
-  function hideAllElements() {
-    allPosts.forEach( function (ele) {
-      ele.classList.add("hide");
-    });
-  }
-
-  var filterInput = document.getElementById("filter-blog-posts");
-  filterInput.onchange = function(e) {
-    var _search = this.value;
-
-    if ( tagsToFilter[_search] ) {
-
-      hideAllElements();
-
-      var _results = tagsToFilter[_search];
-      _results.forEach( function ( post ) {
-        console.log(post);
-        _domHighLight = [].slice.call(document.querySelectorAll("[data-post='" + post + "']"));
-        _domHighLight.forEach( function (ele) {
-          ele.classList.add("highlight");
-        });
-      });
-    } else {
-      clearSearchedElements();
-    }
-
-  };
-
-})();
-
-
-</script>
+<script src="/js/searchBlog.min.js"></script>

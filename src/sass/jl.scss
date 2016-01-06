@@ -561,6 +561,7 @@ body {
         font-size: 0.9rem;
       }
     }
+
     .filter-blog-posts-input{
       padding: 10px;
       border: 0;
@@ -569,6 +570,23 @@ body {
       width: calc(90%-40px);
       margin-top: 10px;
       margin-left: 40px;
+    }
+    .results-found-box{
+      display: block;
+      margin-left: 40px;
+      opacity: 0;
+      transition: opacity 200ms;
+      font-size: 0.8rem;
+      &.activate{
+        opacity: 1;
+      }
+      #clear-results{
+        color: darken($color-red, 10%);
+        cursor: pointer;
+        &:hover{
+          color: #222;
+        }
+      }
     }
   }
   .blog-title{
