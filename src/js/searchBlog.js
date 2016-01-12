@@ -94,6 +94,8 @@
 
   clearResults.addEventListener("click", function() {
     clearSearchedElements(true);
+    filterInput.value = "";
+    
   });
 
 })();

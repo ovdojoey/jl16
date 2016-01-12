@@ -39,7 +39,7 @@ body {
   z-index: -1;
   transition: opacity 600ms 50ms;
   animation: throb 4s 1 alternate ease;
-  opacity: 0.34;
+  opacity: 0.3;
   &.hue-rotate {
     animation: throb 3s 1 alternate ease, hueRotate 225s infinite alternate ease;
   }
@@ -305,7 +305,6 @@ body {
 .blog .navigation .navigation--link{
   color: #24b5a6;
   color: $color-light-blue;
-
 }
 .navigation .navigation--link{
     text-decoration: none;
