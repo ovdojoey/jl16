@@ -96,7 +96,12 @@ body {
       background-position: 100% 40%;
     }
   }
+  &.color-splash{
 
+    background: url(/img/color-blast.jpg) 110% 40% no-repeat;
+    background-size: 890px;
+    
+  }
   &.piano{
     background: url(/img/piano.jpg) 110% 40% no-repeat;
     background-size: 890px;
@@ -744,6 +749,11 @@ body {
     }
   }
 }
+@keyframes goMissing {
+  100% {
+    opacity: 0;
+  }
+}
 .home-headline{
   margin-top: 50px;
   font-size: 4rem;
@@ -752,6 +762,9 @@ body {
   margin-bottom: 40px;
   padding: 0 10px;
   color: #2c2929;
+  .missing{
+    animation: goMissing 1 infinite alternate;
+  }
 }
 .home-headline.h2{
   font-size: 2rem;
