@@ -34,7 +34,6 @@ Metalsmith(__dirname)
       livereload: true,
     })
   )
-  // .use(filecheck)
   .use(layouts({
     "engine" : "handlebars",
     "directory" : "src/layouts",
@@ -49,35 +48,3 @@ Metalsmith(__dirname)
   .build(function(err){
      if (err) throw err;
    });
-
-   /**
-    * Emtpy concat plugin.
-    *
-    * @param {Object} files
-    * @param {Metalsmith} metalsmith
-    * @param {Function} done
-    */
-
-   function filecheck(files, metalsmith, done){
-     var css = '';
-
-     for (var file in files) {
-      //  console.log(file);
-
-       if ( files[file].collection && files[file].collection.length > 0 ) {
-
-
-       }
-      //  if ('.css' != extname(file)) continue;
-      //  css += files[file].contents.toString();
-      //  delete files[file];
-     }
-
-
-
-    //  files['index.css'] = {
-    //    contents: new Buffer(css)
-    //  };
-
-     done();
-   }
